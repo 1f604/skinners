@@ -10,7 +10,6 @@ def f(j):
     x = 1
     for i in range(j):
         x += randint(0,j)
-    print x
     return x
 chance = 1
 level = 1
