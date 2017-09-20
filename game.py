@@ -8,8 +8,8 @@ Created on Wed Sep 20 19:40:14 2017
 from random import randint
 def f(j):
     x = 1
-    for i in range(j):
-        x += randint(0,j)
+    for i in range(10):
+        x *= 1+(randint(0,j) / 10.0)
     return x
 chance = 1
 level = 1
@@ -22,5 +22,4 @@ while True:
     if chance > roll:
         level += 1
         print "level up! Now level ", level
-    
     
