@@ -14,12 +14,22 @@ def f(j):
 chance = 1
 level = 1
 
+def randpair(x=10,y=10):
+    return (randint(0,x),randint(0,y))
+
 while True:
-    raw_input("press enter for your next reward")
-    reward = f(level+3)
-    print "your reward is: ", reward
-    roll = randint(0,10)
-    if chance > roll:
-        level += 1
-        print "level up! Now level ", level
+    x,y = randpair()
+    k = input("what is " + str(x)+ "+ " +str(y)+"?")
+    if k == x + y:
+        reward = f(level+3)
+        print "your reward is: ", reward
+        roll = randint(0,10)
+        if chance > roll:
+            level += 1
+            print "level up! Now level ", level
+    else:
+        level -= 1
+        print "Nuh uh! You lost a level. Current level ", level
+        
+    
     
